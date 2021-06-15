@@ -45,12 +45,14 @@ public class VoterServiceImpl implements VoterService {
 	public Voter getVoter(int VoterId) {
 		Optional<Voter> voter = voterRepository.findById(VoterId);
 		System.out.println(voter);
-		if (voter.isEmpty()) {
-			throw new NoSuchVoterFound("NO Voter FOUND");
-		} else {
-			return voter.get();
-
-		}
+		return voter.get();
+		
+//		if (voter.isEmpty()) {
+//			throw new NoSuchVoterFound("NO Voter FOUND");
+//		} else {
+//			return voter.get();
+//
+//		}
 	}
 
 	@Override
