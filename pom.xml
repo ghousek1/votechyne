@@ -110,7 +110,5 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>votechyneapp<finalName>
 	</build>
-
 </project>
