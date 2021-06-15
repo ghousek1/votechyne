@@ -19,22 +19,4 @@ public class VotechyneApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(VotechyneApplication.class, args);
 	}
-    
-	
-	@Bean
-	public Docket mySwaggerConfig() {
-
-		return new Docket(DocumentationType.SWAGGER_2).select()
-				.apis(RequestHandlerSelectors.basePackage("com.ghouse.votechyne")).build()
-				.apiInfo(mySwaggerApiInfo());
-	}
-
-	public ApiInfo mySwaggerApiInfo() {
-
-		return new ApiInfo("Votechyne App", "Votechyne-Spring Boot Application developed by Ghouse", "v 1.0",
-				"www.gouse369.com/tandc",
-				new springfox.documentation.service.Contact("ghouse", "gouse369.github.io", "gouse369@gmail.com"),
-				"Apache License", "apache.org/license", Collections.emptyList());
-
-	}
 }
